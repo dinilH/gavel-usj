@@ -20,7 +20,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative py-25 md:py-48 flex items-center justify-center overflow-hidden"
+      className="relative py-30 md:py-25 flex items-center justify-center overflow-hidden"
     >
       {/* Full-width gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#781007] to-[#000000]" />
@@ -68,8 +68,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Our Speech Master program offers structured training and personalized feedback to help
-            you become a proficient and engaging speaker.
+            Speech Master is a prestigious public speaking competition with separate school and university sections. It provides a series of workshops and training sessions designed to nurture students’ communication skills, boost confidence, and prepare them to compete at their best. Through this program, participants gain practical experience, personalized guidance, and opportunities to showcase their talent in a structured, competitive environment.
           </motion.p>
 
           {/* CTA Button */}
