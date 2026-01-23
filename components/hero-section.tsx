@@ -20,7 +20,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative py-25 md:py-48 flex items-center justify-center overflow-hidden"
     >
       {/* Full-width gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#781007] to-[#000000]" />
@@ -39,14 +39,14 @@ export function HeroSection() {
         className="absolute top-1/3 left-1/4 w-32 h-32 bg-white/3 rounded-full blur-2xl hidden md:block"
       />
 
-      <motion.div style={{ opacity }} className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl relative z-10">
-        <div className="max-w-2xl mx-auto text-center">
+      <motion.div style={{ opacity }} className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl relative z-10">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white text-balance"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white text-balance"
           >
             Speech Master
           </motion.h1>
@@ -56,7 +56,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-base sm:text-lg text-white/90 font-medium mb-3"
+            className="text-lg sm:text-xl text-white/90 font-medium mb-4"
           >
             Sri Lanka{"'"}s premium stage for public speaking
           </motion.p>
@@ -66,7 +66,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Our Speech Master program offers structured training and personalized feedback to help
             you become a proficient and engaging speaker.
@@ -81,6 +81,7 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-white hover:bg-white/90 text-[#781007] px-8 py-6 text-xs rounded-lg font-semibold"
+              onClick={() => window.open('https://forms.google.com', '_blank')}
             >
               Register Now
             </Button>

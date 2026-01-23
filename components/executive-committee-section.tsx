@@ -47,16 +47,16 @@ export function ExecutiveCommitteeSection() {
   ];
 
   return (
-    <section id="committee" className="py-16 bg-[#FCFCFD] overflow-hidden">
-      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl" ref={ref}>
+    <section id="committee" className="py-20 bg-[#FCFCFD] overflow-hidden">
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-6"
+          className="text-center mb-8"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#781007] to-[#000000] bg-clip-text text-transparent">
               Executive Committee
             </span>
@@ -85,10 +85,10 @@ export function ExecutiveCommitteeSection() {
                     whileHover={{ y: -5, scale: 1.02 }}
                     className="flex-shrink-0"
                   >
-                    <div className="h-full p-4 rounded-2xl bg-white border border-border hover:shadow-lg transition-all">
+                    <div className="h-full p-5 rounded-2xl bg-white border border-border hover:shadow-lg transition-all">
                       {/* Avatar with Image */}
-                      <div className="flex justify-center mb-3">
-                        <div className="w-20 h-20 rounded-full overflow-hidden bg-[#EEF1F4] relative">
+                      <div className="flex justify-center mb-2">
+                        <div className="w-28 h-28 rounded-full overflow-hidden bg-[#EEF1F4] relative">
                           <Image
                             src={member.image}
                             alt={member.name}
@@ -100,10 +100,10 @@ export function ExecutiveCommitteeSection() {
 
                       {/* Info */}
                       <div className="text-center">
-                        <h3 className="text-xs font-bold text-foreground mb-1 break-words">
+                        <h3 className="text-base font-bold text-foreground mb-1 break-words">
                           {member.name}
                         </h3>
-                        <p className="text-[#781007] font-medium text-xs mb-2 line-clamp-2 min-h-[2rem]">
+                        <p className="text-[#781007] font-medium text-sm mb-2 line-clamp-2 min-h-[2rem]">
                           {member.position}
                         </p>
                       </div>
@@ -124,9 +124,9 @@ export function ExecutiveCommitteeSection() {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.05 * index }}
             >
-              <div className="h-full p-4 rounded-2xl bg-white border border-border">
-                <div className="flex justify-center mb-3">
-                  <div className="w-16 h-16 rounded-full overflow-hidden bg-[#EEF1F4] relative">
+              <div className="h-full p-5 rounded-2xl bg-white border border-border">
+                <div className="flex justify-center mb-2">
+                  <div className="w-24 h-24 rounded-full overflow-hidden bg-[#EEF1F4] relative">
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -136,10 +136,10 @@ export function ExecutiveCommitteeSection() {
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xs font-bold text-foreground mb-1 break-words">
+                  <h3 className="text-base font-bold text-foreground mb-1 break-words">
                     {member.name}
                   </h3>
-                  <p className="text-[#781007] font-medium text-xs mb-2 line-clamp-2 min-h-[2rem]">
+                  <p className="text-[#781007] font-medium text-sm mb-2 line-clamp-2 min-h-[2rem]">
                     {member.position}
                   </p>
                 </div>

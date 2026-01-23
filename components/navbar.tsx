@@ -60,7 +60,7 @@ export function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl">
+        <nav className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-4xl">
           <div className="flex items-center justify-between h-10 lg:h-12">
             {/* Logo */}
             <Link href="#home" className="flex items-center gap-2">
@@ -72,7 +72,7 @@ export function Navbar() {
                   className="object-contain"
                 />
               </div>
-              <span className={`font-semibold text-xs transition-colors ${
+              <span className={`font-semibold text-sm transition-colors ${
                 isScrolled ? "text-foreground" : "text-white"
               }`}>
                 Gavel Club USJ
@@ -86,7 +86,7 @@ export function Navbar() {
                   key={link.name}
                   href={link.href === "speechmaster" ? "#" : link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`transition-colors font-medium text-xs ${
+                  className={`transition-colors font-medium text-sm ${
                     isScrolled 
                       ? "text-foreground/80 hover:text-[#781007]" 
                       : "text-white/90 hover:text-white"

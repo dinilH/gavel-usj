@@ -27,16 +27,16 @@ export function MemoriesSection() {
   const displayedMemories = showAll ? allMemories : allMemories.slice(0, maxInitialItems);
 
   return (
-    <section className="py-16 bg-[#EEF1F4]">
-      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl" ref={ref}>
+    <section className="py-20 bg-[#EEF1F4]">
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-6"
+          className="text-center mb-8"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#781007] to-[#000000] bg-clip-text text-transparent">
               Our Memories
             </span>

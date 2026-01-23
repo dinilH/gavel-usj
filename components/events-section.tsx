@@ -10,16 +10,16 @@ export function EventsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="events" className="py-16 bg-[#FCFCFD]">
-      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl" ref={ref}>
+    <section id="events" className="py-20 bg-[#FCFCFD]">
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-6xl" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#781007] to-[#000000] bg-clip-text text-transparent">
               Events
             </span>
@@ -46,11 +46,11 @@ export function EventsSection() {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">
+              <div className="p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                   Gavel Educational Meeting
                 </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Gavel Educational Meetings are the heart of our club, providing a 
                   supportive platform to practice public speaking. Our weekly meetings 
                   include prepared speeches, Table Topics for impromptu speaking, and 
@@ -79,11 +79,11 @@ export function EventsSection() {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">
+              <div className="p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                   CC Marathon
                 </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   CC Marathon is an intensive program where members complete all 10 
                   communication projects, strengthening public speaking skills through 
                   continuous practice, feedback, and personal growth.

@@ -50,16 +50,16 @@ export function ContactSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-16 bg-[#FCFCFD]">
-      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl" ref={ref}>
+    <section id="contact" className="py-20 bg-[#FCFCFD]">
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#781007] to-[#000000] bg-clip-text text-transparent">
               Contact Us
             </span>
@@ -97,9 +97,9 @@ export function ContactSection() {
           className="grid grid-cols-4 gap-3 max-w-4xl mx-auto"
         >
           {teamContacts.map((contact, index) => (
-            <div key={index} className="p-3 rounded-xl bg-white border border-border text-center">
+            <div key={index} className="p-5 rounded-xl bg-white border border-border text-center">
               {/* Avatar */}
-              <div className="w-10 h-10 mx-auto rounded-full overflow-hidden bg-[#EEF1F4] mb-2 relative">
+              <div className="w-28 h-28 mx-auto rounded-full overflow-hidden bg-[#EEF1F4] mb-2 relative">
                 <Image
                   src={contact.image}
                   alt={contact.name}
@@ -108,10 +108,10 @@ export function ContactSection() {
                 />
               </div>
 
-              <h3 className="font-bold text-foreground mb-1 text-xs break-words">{contact.name}</h3>
-              <p className="text-[#781007] text-[10px] font-medium mb-2 line-clamp-2 min-h-[2rem]">{contact.position}</p>
-              <div className="flex items-center justify-center gap-1 text-[10px] text-muted-foreground">
-                <Phone className="w-3 h-3 flex-shrink-0" />
+              <h3 className="font-bold text-foreground mb-1 text-base break-words">{contact.name}</h3>
+              <p className="text-[#781007] text-sm font-medium mb-2 line-clamp-2 min-h-[2rem]">{contact.position}</p>
+              <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground">
+                <Phone className="w-4 h-4 flex-shrink-0" />
                 <span className="break-all">{contact.phone}</span>
               </div>
             </div>

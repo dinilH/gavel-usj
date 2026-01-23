@@ -49,17 +49,17 @@ export function PodcastsSection() {
   };
 
   return (
-    <section id="podcasts" className="py-16 bg-[#EEF1F4]" style={{ perspective: "1000px" }}>
-      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-3xl" ref={ref}>
+    <section id="podcasts" className="py-20 bg-[#EEF1F4]" style={{ perspective: "1000px" }}>
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-6"
+          className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8"
         >
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
               <span className="bg-gradient-to-r from-[#781007] to-[#000000] bg-clip-text text-transparent">
                 Podcasts
               </span>
