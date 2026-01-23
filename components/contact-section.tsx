@@ -94,7 +94,7 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-4 gap-3 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto"
         >
           {teamContacts.map((contact, index) => (
             <div key={index} className="p-5 rounded-xl bg-white border border-border text-center">
