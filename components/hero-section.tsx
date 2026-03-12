@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -20,7 +21,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative py-30 md:py-25 flex items-center justify-center overflow-hidden"
+      className="relative py-40 md:py-36 flex items-center justify-center overflow-hidden"
     >
       {/* Full-width gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#781007] to-[#000000]" />
@@ -39,52 +40,50 @@ export function HeroSection() {
         className="absolute top-1/3 left-1/4 w-32 h-32 bg-white/3 rounded-full blur-2xl hidden md:block"
       />
 
-      <motion.div style={{ opacity }} className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white text-balance"
-          >
-            Speech Master
-          </motion.h1>
+      <motion.div
+        style={{ opacity }}
+        className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl relative z-10"
+      >
+        {/* Logo + Text */}
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-14">
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg sm:text-xl text-white/90 font-medium mb-4"
-          >
-            Sri Lanka{"'"}s premium stage for public speaking
-          </motion.p>
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Gavel Club Logo"
+              width={200}
+              height={200}
+              className="w-32 md:w-44 lg:w-48"
+              priority
+            />
+          </div>
 
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
-            Speech Master is a prestigious public speaking competition with separate school and university sections. It provides a series of workshops and training sessions designed to nurture students’ communication skills, boost confidence, and prepare them to compete at their best. Through this program, participants gain practical experience, personalized guidance, and opportunities to showcase their talent in a structured, competitive environment.
-          </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Button
-              size="lg"
-              className="bg-white hover:bg-white/90 text-[#781007] px-8 py-6 text-xs rounded-lg font-semibold"
-              onClick={() => window.open('https://forms.google.com', '_blank')}
+          {/* Text Content */}
+          <div className="text-center md:text-left">
+            {/* Main Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-white text-balance leading-tight"
             >
-              Register Now
-            </Button>
-          </motion.div>
+              Gavel Club of <br />
+              University of <br />
+              Sri Jayawardenapura
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-lg sm:text-xl text-white/90 font-medium mb-4"
+            >
+              Where the great speakers are made
+            </motion.p>
+          </div>
+
         </div>
       </motion.div>
     </section>
