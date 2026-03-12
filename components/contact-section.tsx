@@ -50,7 +50,7 @@ export function ContactSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-20 bg-[#FCFCFD]">
+    <section id="contact" className="py-20 bg-[#EEF1F4]">
       <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-5xl" ref={ref}>
         {/* Section Header */}
         <motion.div

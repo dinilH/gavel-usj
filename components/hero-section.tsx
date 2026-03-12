@@ -80,7 +80,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg sm:text-xl text-white/90 font-medium mb-4"
             >
-              Where the great speakers are made
+             
             </motion.p>
           </div>
 

@@ -12,12 +12,13 @@ export function EventsSection() {
   return (
     <section id="events" className="py-20 bg-[#FCFCFD]">
       <div className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-6xl" ref={ref}>
+        
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#781007] to-[#000000] bg-clip-text text-transparent">
@@ -27,7 +28,8 @@ export function EventsSection() {
         </motion.div>
 
         {/* Events Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
           {/* Gavel Educational Meeting */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -36,10 +38,9 @@ export function EventsSection() {
             className="group"
           >
             <div className="h-full rounded-2xl bg-white border border-border overflow-hidden hover:shadow-lg transition-shadow">
-              {/* Image at top */}
               <div className="aspect-video overflow-hidden relative">
                 <Image
-                  src="/events/1.jpg"
+                  src="/events/1.jpeg"
                   alt="Gavel Educational Meeting"
                   fill
                   className="object-cover"
@@ -51,11 +52,12 @@ export function EventsSection() {
                   Gavel Educational Meeting
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Gavel Educational Meetings are the heart of our club, providing a 
-                  supportive platform to practice public speaking. Our weekly meetings 
-                  include prepared speeches, Table Topics for impromptu speaking, and 
-                  Round Robin evaluations, helping members consistently improve 
-                  communication, confidence, and leadership skills.
+                  Gavel Educational Meetings are the heart of our club,
+                  providing a supportive platform to practice public speaking.
+                  Our weekly meetings include prepared speeches, Table Topics
+                  for impromptu speaking, and Round Robin evaluations, helping
+                  members consistently improve communication, confidence, and
+                  leadership skills.
                 </p>
               </div>
             </div>
@@ -69,10 +71,9 @@ export function EventsSection() {
             className="group"
           >
             <div className="h-full rounded-2xl bg-white border border-border overflow-hidden hover:shadow-lg transition-shadow">
-              {/* Image at top */}
               <div className="aspect-video overflow-hidden relative">
                 <Image
-                  src="/events/2.jpg"
+                  src="/events/2.png"
                   alt="CC Marathon"
                   fill
                   className="object-cover"
@@ -84,13 +85,45 @@ export function EventsSection() {
                   CC Marathon
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  CC Marathon is an intensive program where members complete all 10 
-                  communication projects, strengthening public speaking skills through 
-                  continuous practice, feedback, and personal growth.
+                  CC Marathon is an intensive program where members complete all
+                  10 communication projects, strengthening public speaking
+                  skills through continuous practice, feedback, and personal
+                  growth.
                 </p>
               </div>
             </div>
           </motion.div>
+
+          {/* Themed Educational Meeting */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="group"
+          >
+            <div className="h-full rounded-2xl bg-white border border-border overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="aspect-video overflow-hidden relative">
+                <Image
+                  src="/events/3.jpg"
+                  alt="Themed Educational Meeting"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+                  Themed Educational Meeting
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Themed Educational Meetings focus on creating engaging and
+                  creative speaking experiences centered around a specific
+                  theme such as Christmas, Valentine’s Day,Eid etc. 
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

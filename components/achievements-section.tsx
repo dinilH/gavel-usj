@@ -12,6 +12,11 @@ const achievements = [
   { id: 3, title: "Achievement 3", image: "/achievements/3.jpg" },
   { id: 4, title: "Achievement 4", image: "/achievements/4.jpg" },
   { id: 5, title: "Achievement 5", image: "/achievements/5.jpg" },
+  { id: 6, title: "Achievement 6", image: "/achievements/6.jpg" },
+  { id: 7, title: "Achievement 7", image: "/achievements/7.jpg" },
+  { id: 8, title: "Achievement 8", image: "/achievements/8.jpg" },
+  { id: 9, title: "Achievement 9", image: "/achievements/9.jpg" },
+  { id: 10, title: "Achievement 10", image: "/achievements/10.jpg" },
 ];
 
 export function AchievementsSection() {
@@ -40,7 +45,7 @@ export function AchievementsSection() {
   // Auto-play carousel
   useEffect(() => {
     if (!isAutoPlaying) return;
-    const interval = setInterval(nextSlide, 4000);
+    const interval = setInterval(nextSlide, 7000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
