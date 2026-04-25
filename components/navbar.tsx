@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Home", href: "/#home" },
   { name: "About Us", href: "/#about" },
   { name: "Contact Us", href: "/#contact" },
-  { name: "Speech Master", href: "/speechmaster" } // Direct route
+  { name: "Speech Master", href: "/speechmaster" },
 ];
 
 export function Navbar() {
