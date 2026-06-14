@@ -9,8 +9,11 @@ import { PodcastsSection } from "@/components/podcasts-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import { BlogsSection } from "@/components/blogs";
+import { getBlogs } from "@/lib/db";
 
-export default function Home() {
+export default async function Home() {
+  const blogs = await getBlogs();
+
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -19,11 +22,12 @@ export default function Home() {
       <MemoriesSection />
       <EventsSection />
       <AchievementsSection />
+      <BlogsSection blogs={blogs} />
       <ExecutiveCommitteeSection />
       <PodcastsSection />
-      {/* <BlogsSection /> */}
       <ContactSection />
       <Footer />
     </main>
   );
 }
+

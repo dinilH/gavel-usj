@@ -51,7 +51,7 @@ export function EventsSection() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                   Gavel Educational Meeting
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Gavel Educational Meetings are the heart of our club,
                   providing a supportive platform to practice public speaking.
                   Our weekly meetings include prepared speeches, Table Topics
@@ -84,7 +84,7 @@ export function EventsSection() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                   CC Marathon
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   CC Marathon is an intensive program where members complete all
                   10 communication projects, strengthening public speaking
                   skills through continuous practice, feedback, and personal
@@ -115,7 +115,7 @@ export function EventsSection() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                   Themed Educational Meeting
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Themed Educational Meetings focus on creating engaging and
                   creative speaking experiences centered around a specific
                   theme such as Christmas, Valentine’s Day,Eid etc. 

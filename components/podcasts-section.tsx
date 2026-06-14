@@ -127,7 +127,7 @@ export function PodcastsSection() {
 
                 {/* Content */}
                 <div className="p-4">
-                  <span className="text-xs text-[#781007] font-medium">
+                  <span className="text-sm text-[#781007] font-semibold">
                     {podcast.episode}
                   </span>
                   <h3 className="text-base font-bold text-foreground mt-1">{podcast.title}</h3>

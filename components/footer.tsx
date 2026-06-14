@@ -42,7 +42,7 @@ export function Footer() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-xs text-muted-foreground hover:text-[#781007] transition-colors"
+              className="text-sm text-muted-foreground hover:text-[#781007] transition-colors"
             >
               {link.name}
             </Link>
@@ -51,7 +51,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             2026 Gavel Club USJ. All rights reserved.
           </p>
         </div>

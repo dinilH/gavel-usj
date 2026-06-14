@@ -103,7 +103,7 @@ export function ExecutiveCommitteeSection() {
                         <h3 className="text-base font-bold text-foreground mb-1 break-words">
                           {member.name}
                         </h3>
-                        <p className="text-[#781007] font-medium text-sm mb-2 line-clamp-2 min-h-[2rem]">
+                        <p className="text-[#781007] font-medium text-sm sm:text-base mb-2 line-clamp-2 min-h-[2rem]">
                           {member.position}
                         </p>
                       </div>
@@ -139,7 +139,7 @@ export function ExecutiveCommitteeSection() {
                   <h3 className="text-base font-bold text-foreground mb-1 break-words">
                     {member.name}
                   </h3>
-                  <p className="text-[#781007] font-medium text-sm mb-2 line-clamp-2 min-h-[2rem]">
+                  <p className="text-[#781007] font-medium text-sm sm:text-base mb-2 line-clamp-2 min-h-[2rem]">
                     {member.position}
                   </p>
                 </div>

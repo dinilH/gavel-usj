@@ -83,7 +83,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
-                <p className="text-muted-foreground text-sm">{info.content}</p>
+                <p className="text-muted-foreground text-base">{info.content}</p>
               </div>
             </div>
           ))}
@@ -109,8 +109,8 @@ export function ContactSection() {
               </div>
 
               <h3 className="font-bold text-foreground mb-1 text-base break-words">{contact.name}</h3>
-              <p className="text-[#781007] text-sm font-medium mb-2 line-clamp-2 min-h-[2rem]">{contact.position}</p>
-              <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground">
+              <p className="text-[#781007] text-sm sm:text-base font-medium mb-2 line-clamp-2 min-h-[2rem]">{contact.position}</p>
+              <div className="flex items-center justify-center gap-1 text-sm sm:text-base text-muted-foreground">
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 <span className="break-all">{contact.phone}</span>
               </div>

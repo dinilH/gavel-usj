@@ -53,7 +53,7 @@ export function AboutSection() {
                 Gavel Club of University of Sri Jayewardenepura
               </h3>
 
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 The Gavel Club of University of Sri Jayewardenepura stands as one
                 of the prestigious clubs within the university. Affiliated with
                 Toastmasters International, the Club serves as a structured
@@ -96,7 +96,7 @@ export function AboutSection() {
                 Career Guidance Unit
               </h3>
 
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 The Career Guidance Unit (CGU) was established to highlight the
                 importance of improving students' employability and career
                 readiness. It includes student-led clubs such as CSDS,
