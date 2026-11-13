@@ -30,6 +30,7 @@ import {
   ArrowLeft,
   Settings,
   Sparkles,
+  Vote,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -304,6 +305,15 @@ export function DashboardClient({ initialBlogs, username }: DashboardClientProps
             <span className="text-sm text-zinc-400 hidden sm:inline-block">
               Logged in as <strong className="text-zinc-200">{username}</strong>
             </span>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => router.push("/admin/vote")}
+              className="border-zinc-800 text-zinc-400 hover:text-white hover:bg-[#781007] hover:border-[#781007] flex items-center gap-2 cursor-pointer"
+            >
+              <Vote className="w-4 h-4" />
+              <span className="hidden sm:inline">Table Topics</span>
+            </Button>
             <Button
               variant="outline"
               size="sm"

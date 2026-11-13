@@ -6,6 +6,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 const footerLinks = [
   { name: "Home", href: "#home" },
   { name: "Speech Master", href: "#speech-master" },
+  { name: "TT Vote", href: "/vote" },
   { name: "About Us", href: "#about" },
   { name: "Contact Us", href: "#contact" },
 ];

@@ -11,9 +11,14 @@ const navLinks = [
   { name: "About Us", href: "/#about" },
   { name: "Contact Us", href: "/#contact" },
   { name: "Speech Master", href: "/speechmaster" },
+  { name: "TT Vote", href: "/vote" },
 ];
 
-export function Navbar() {
+type NavbarProps = {
+  forceSolid?: boolean;
+};
+
+export function Navbar({ forceSolid = false }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,13 +30,15 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isSolid = isScrolled || forceSolid;
+
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isSolid
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
@@ -39,7 +46,7 @@ export function Navbar() {
       <nav className="container mx-auto px-8 sm:px-6 lg:px-8 max-w-4xl">
         <div className="flex items-center justify-between h-10 lg:h-12">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2">
+          <Link href="/#home" className="flex items-center gap-2">
             <div className="w-7 h-7 relative">
               <Image
                 src="/logo.png"
@@ -50,7 +57,7 @@ export function Navbar() {
             </div>
             <span
               className={`font-semibold text-sm transition-colors ${
-                isScrolled ? "text-foreground" : "text-white"
+                isSolid ? "text-foreground" : "text-white"
               }`}
             >
               Gavel Club USJ
@@ -64,7 +71,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`transition-colors font-medium text-sm ${
-                  isScrolled
+                  isSolid
                     ? "text-foreground/80 hover:text-[#781007]"
                     : "text-white/90 hover:text-white"
                 }`}
@@ -79,7 +86,7 @@ export function Navbar() {
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 transition-colors ${
-              isScrolled ? "text-foreground" : "text-white"
+              isSolid ? "text-foreground" : "text-white"
             }`}
             aria-label="Toggle menu"
           >

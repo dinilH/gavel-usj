@@ -22,6 +22,7 @@ The Gavel Club of the University of Sri Jayewardenepura operates under the Caree
 - Events and achievements galleries
 - Podcast integration with YouTube
 - Contact information and social media links
+- Table Topics voter at `/vote` with PIN-based ballots, live admin results, and manual vote entry
 
 ## Getting Started
 
@@ -43,6 +44,15 @@ pnpm build
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the website.
+
+### Environment variables
+
+Copy `.env.example` to `.env` and fill in the values. The Table Topics voter needs `MONGODB_URI`; the admin area uses `ADMIN_USERNAME`, `ADMIN_PASSWORD`, and `JWT_SECRET`.
+
+### Table Topics voter
+
+- Public voting: [http://localhost:3000/vote](http://localhost:3000/vote) (ballot at [http://localhost:3000/vote/ballot](http://localhost:3000/vote/ballot))
+- Admin console: [http://localhost:3000/admin/vote](http://localhost:3000/admin/vote) (uses the existing website admin session)
 
 ## Project Structure
 
