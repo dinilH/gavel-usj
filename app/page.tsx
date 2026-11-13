@@ -8,12 +8,8 @@ import { ExecutiveCommitteeSection } from "@/components/executive-committee-sect
 import { PodcastsSection } from "@/components/podcasts-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
-import { BlogsSection } from "@/components/blogs";
-import { getBlogs } from "@/lib/db";
 
 export default async function Home() {
-  const blogs = await getBlogs();
-
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -22,7 +18,6 @@ export default async function Home() {
       <MemoriesSection />
       <EventsSection />
       <AchievementsSection />
-      <BlogsSection blogs={blogs} />
       <ExecutiveCommitteeSection />
       <PodcastsSection />
       <ContactSection />
